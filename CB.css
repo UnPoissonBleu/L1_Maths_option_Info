@@ -1,0 +1,63 @@
+#grille{
+    display: grid;
+    grid-template-areas:'a a'
+                        'b b'
+                        'c d'
+                        'e e';
+    
+}
+form{
+    width: 20%;
+
+    padding-left: 41%;
+    font-size: small;
+}
+input[type=text]{
+    border-color: rgb(0, 0, 155);
+    padding:10px;
+    padding-left:20px;
+    border-radius:4px;
+    font-size: 1.25em;
+}
+#thaut{
+    grid-area:a;
+    margin: 10px;
+
+}
+#haut{
+    grid-area:b;
+    margin: 10px;
+
+}
+#twina{
+    grid-area:c;
+    margin: 10px;
+
+}
+#twinb{
+    grid-area:d;
+    margin: 10px;
+
+
+}
+#bas{
+    grid-area:e;
+    margin: 10px;
+    size: 100px;
+
+}
+#sub{
+    background-color:rgb(0, 0, 155);
+    border:None ;
+    color:#fff;
+    width: 100%;
+    backdrop-filter:blur();
+}
+#sub:hover{
+    background-color:rgb(0, 0, 189) ;
+}
+
+#i1,#i2{
+    width: 90%; 
+}
+

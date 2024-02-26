@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang=fr>
+    <head>
+        <meta charset="utf-8">
+        <link media="all" rel="stylesheet" href="CB.css">
+
+        <title>Formulaire CB</title>
+    </head>
+    <body>
+        <form action="#">
+                <div id="grille">
+
+                    <div id="thaut">
+                        <p>
+                            Nom/Prenom
+                        </p>
+                        <input type="text" id="i1" name="nom" placeholder="Firstname Lastname" pattern="[A-Z][a-z\s\-]{0,}[\s][A-Z][a-z\s\-]{0,}" required>
+                    </div>
+
+                    <div id="haut">
+                        <p>
+                            Numero de Carte 
+                        </p>
+                        <input type="text" id="i2" pattern="[0-9]{16}" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="\b{4}[\-]\b{4}[\-]\b{4}[\-]\b{4}[\-]" oninvalid="'Le champ doit correspondre à: xxxx-xxxx-xxxx-xxxx'" required>
+                    </div>
+
+                    <div id="twina">
+                        <p>
+                            Date de validité
+                        </p>
+                        <input id="date" type="text" placeholder="01/25" size="3px" required>
+                    </div>
+
+                    <div id="twinb">
+                        <p>
+                            Code de securité
+                        </p>
+                        <input type="text" size="3px" placeholder="404" required>
+                    </div>
+
+                    <div id="bas">
+                        <input type="submit" name="" id="sub" value="Payer" required>
+                    </div>
+                </div>
+        </form>
+        
+        <script>
+            var cardExpiration = document.getElementById('date');
+            cardExpiration.onkeyup = function(){
+                var expirationMonth = (cardExpiration.value).slice(0,2);
+                var expirationYear = (cardExpiration.value).slice(2,4);}
+            ChaineDate.onkeyup = function(){
+                if (expirationMonth.length==2) {
+                    var month = expirationMonth.valueOf();
+                        if (month <1 || month>12)
+                            expirationMonth = "**" ;
+                }
+                if (expirationYear.length==2) {
+                    var year = expirationYear.valueOf();
+                    if (year <19 || year>24)
+                    expirationYear = "**";
+                    }
+                cardExpiration.value = expirationMonth + expirationYear;}
+            
+        </script>
+    </body>
+</html>
