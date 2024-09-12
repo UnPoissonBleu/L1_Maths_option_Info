@@ -1,1 +1,3 @@
-Bonjour, truc pour machin d'info au revoir
+Info L1 maths
+ -TP et TD 
+ -Projet évalué 
